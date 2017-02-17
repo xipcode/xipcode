@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Unit tests</title>
+        <script type="text/javascript" src="../../../node_modules/mocha/mocha.js"></script>
+        <link rel="stylesheet" href="../../../node_modules/mocha/mocha.css">
+    </head>
+
+    <body>
+    <div id="mocha"></div>
+
+    <script>
+        mocha.setup("bdd");
+    </script>
+
+    <!-- Load tests here -->
+    <script src="../build/test/browser/shared-project-1.libs.bundle.js"></script>
+    <script src="../build/test/browser/shared-project-1.tests.bundle.js"></script>
+    <script>
+        mocha.run();
+    </script>
+    </body>
+</html>

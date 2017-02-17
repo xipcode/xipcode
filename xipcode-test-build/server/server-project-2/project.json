@@ -1,0 +1,13 @@
+{
+  "id": "server-project-2",
+  "main": "src/module.js",
+  "scenarios": [
+    "node"
+  ],
+  "dependencies": [
+    "server-project-1"
+  ],
+  "devDependencies": [
+    "chai"
+  ]
+}

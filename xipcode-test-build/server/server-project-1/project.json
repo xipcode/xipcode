@@ -1,0 +1,15 @@
+{
+  "id": "server-project-1",
+  "version": "2.0.0",
+  "bin": "src/server1.js",
+  "main": "src/server1.js",
+  "scenarios": [
+    "node"
+  ],
+  "dependencies": [
+    "string"
+  ],
+  "devDependencies": [
+    "chai"
+  ]
+}

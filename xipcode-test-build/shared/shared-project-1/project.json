@@ -1,0 +1,19 @@
+{
+  "id": "shared-project-1",
+  "main": "src/shared1.js",
+  "scenarios": [
+    "node",
+    "browser"
+  ],
+  "lint": {
+    "excludes": [
+      "src/lintExcluded.js"
+    ]
+  },
+  "dependencies": [
+    "string"
+  ],
+  "devDependencies": [
+    "chai"
+  ]
+}

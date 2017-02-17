@@ -1,0 +1,8 @@
+{
+  "id": "test-build",
+  "projects": [
+    "shared",
+    "client",
+    "server"
+  ]
+}

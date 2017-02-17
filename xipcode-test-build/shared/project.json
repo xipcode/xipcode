@@ -1,0 +1,7 @@
+{
+  "id": "shared",
+  "projects": [
+    "shared-project-1",
+    "shared-project-2"
+  ]
+}

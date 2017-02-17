@@ -1,0 +1,11 @@
+{
+  "id": "smoke-test",
+  "main": "src/module.js",
+  "scenarios": [
+    "browser",
+    "node"
+  ],
+  "devDependencies": [
+    "chai"
+  ]
+}

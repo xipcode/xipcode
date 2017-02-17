@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "sources": [
+    "../../node_modules/browser-pack/_prelude.js",
+    "../src/module.js",
+    "moduleTest.js"
+  ],
+  "names": [],
+  "mappings": "AAAA;;;;;;;ACCA,SAAS,WAAT,GAAuB;AACtB,QAAO,MAAP;AACA;;kBAEc;AACd;AADc,C;;;;;ACLf;;AACA;;AACA;;;;;;AAEA,qBAAS,QAAT,EAAmB,YAAM;;AAExB,sBAAS,aAAT,EAAwB,YAAM;;AAE7B,iBAAG,4BAAH,EAAiC,YAAM;AACtC,qBAAO,iBAAO,WAAP,EAAP,EAA6B,EAA7B,CAAgC,KAAhC,CAAsC,MAAtC;AACA,GAFD;AAIA,EAND;AAQA,CAVD",
+  "file": "remapCoverageOperation.tests.bundle.js",
+  "sourceRoot": "../../../test"
+}

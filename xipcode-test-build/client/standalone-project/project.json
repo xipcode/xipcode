@@ -1,0 +1,16 @@
+{
+  "id": "standalone-project",
+  "main": "src/standaloneModule.js",
+  "scenarios": [
+    "browser"
+  ],
+  "dependencies": [
+    "shared-project-1"
+  ],
+  "devDependencies": [
+    "chai"
+  ],
+  "browserCompiler": {
+    "standalone": "clientApi"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "id": "",
+  "main": "src/module.js",
+  "scenarios": [
+    "node",
+    "browser"
+  ],
+  "devDependencies": [
+    "chai"
+  ]
+}

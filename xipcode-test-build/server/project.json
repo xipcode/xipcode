@@ -1,0 +1,7 @@
+{
+  "id": "server",
+  "projects": [
+    "server-project-1",
+    "server-project-2"
+  ]
+}

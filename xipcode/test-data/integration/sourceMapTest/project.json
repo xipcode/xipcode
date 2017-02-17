@@ -1,0 +1,10 @@
+{
+  "id": "sourcemap-test",
+  "main": "src/module.js",
+  "scenarios": [
+    "browser"
+  ],
+  "devDependencies": [
+    "chai"
+  ]
+}

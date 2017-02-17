@@ -1,0 +1,25 @@
+{
+  "plugins": [
+    "import"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "rules": {
+    "indent": [
+      "error",
+      "tab"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "no-console": 2,
+    "import/no-unresolved": 2
+  }
+}

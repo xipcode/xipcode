@@ -1,0 +1,9 @@
+{
+  "id": "client",
+  "projects": [
+    "standalone-project",
+    "client-project-1",
+    "test-product",
+    "dependent-project"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "xipcode-test-build",
+  "version": "0.1.0",
+  "description": "Test build that exercises the major features of xipcode",
+  "license": "ISC",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "ssh://review.exaptive.com:29418/xipcode.git"
+  },
+  "devDependencies": {
+    "babel-polyfill": "6.13.0",
+    "chai": "3.5.0",
+    "eslint-plugin-import": "1.10.2",
+    "gulp": "3.9.1",
+    "gulp-eslint": "2.0.0",
+    "xipcode": "file:../xipcode/build/xipcode-0.7.0.tgz"
+  },
+  "dependencies": {
+    "sinon": "1.17.6",
+    "string": "3.3.3"
+  }
+}

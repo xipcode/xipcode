@@ -1,0 +1,9 @@
+{
+  "id": "test-product",
+  "scenarios": [
+    "product"
+  ],
+  "dependencies": [
+    "client-project-1"
+  ]
+}

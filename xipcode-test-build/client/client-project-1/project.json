@@ -1,0 +1,13 @@
+{
+  "id": "client-project-1",
+  "main": "src/client1.js",
+  "scenarios": [
+    "browser"
+  ],
+  "dependencies": [
+    "standalone-project"
+  ],
+  "devDependencies": [
+    "chai"
+  ]
+}

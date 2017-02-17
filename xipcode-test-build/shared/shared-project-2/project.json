@@ -1,0 +1,14 @@
+{
+  "id": "shared-project-2",
+  "main": "src/shared2.js",
+  "scenarios": [
+    "node",
+    "browser"
+  ],
+  "dependencies": [
+    "shared-project-1"
+  ],
+  "devDependencies": [
+    "chai"
+  ]
+}
