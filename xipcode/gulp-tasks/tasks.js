@@ -141,7 +141,7 @@ function copyPackageJson() {
 }
 
 function copyNpmFiles() {
-	return gulp.src(['README.md', 'LICENSE'])
+	return gulp.src(['../README.md', '../LICENSE'])
 		.pipe(gulp.dest(buildReleaseFolder));
 }
 
