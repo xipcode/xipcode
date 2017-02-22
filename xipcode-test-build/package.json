@@ -14,7 +14,7 @@
     "eslint-plugin-import": "1.10.2",
     "gulp": "3.9.1",
     "gulp-eslint": "2.0.0",
-    "xipcode": "file:../xipcode/build/xipcode-0.7.1.tgz"
+    "xipcode": "file:../xipcode/build/xipcode-0.7.2.tgz"
   },
   "dependencies": {
     "sinon": "1.17.6",
