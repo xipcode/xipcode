@@ -6,7 +6,7 @@
   "main": "src/xipcode.js",
   "repository": {
     "type": "git",
-    "url": "ssh://review.exaptive.com:29418/xipcode.git"
+    "url": "https://github.com/xipcode/xipcode"
   },
   "dependencies": {
     "babel-preset-es2015": "6.16.0",
