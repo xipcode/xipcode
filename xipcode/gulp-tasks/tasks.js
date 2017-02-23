@@ -135,7 +135,6 @@ gulp.task('test:integration', () => {
 function copyPackageJson() {
 	const packageJson = fs.readJsonSync('package.json');
 	delete packageJson.devDependencies;
-	delete packageJson.repository;
 	const targetFile = path.join(buildReleaseFolder, 'package.json');
 	fs.writeJsonSync(targetFile, packageJson);
 }
