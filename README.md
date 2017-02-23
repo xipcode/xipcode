@@ -36,7 +36,7 @@ gulp.task('default', ['install']);
 
 ### Configure the Linting Rules
 
-To get started you can you create an .eslint file with the following:
+To get started you can create a .eslintrc file in the top level folder of the codebase with the following:
 
 ```
 {
@@ -47,7 +47,7 @@ To get started you can you create an .eslint file with the following:
 }
 ```
 
-As you codebase matures you may want to replace this with your own set of rules.
+As the codebase matures you might want to replace this with your own set of rules.
 
 ### Create Your First Xipcode Project
 
