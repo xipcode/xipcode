@@ -33,8 +33,7 @@ describe('packageOperation', () => {
 				version: '2.2.2',
 				rootFolder: 'path/to/root',
 				buildReleaseFolder: 'build/release',
-				main: 'src/project1.js',
-				dependencies: ['dep1', 'dep2']
+				main: 'src/project1.js'
 			};
 		});
 
@@ -81,8 +80,7 @@ describe('packageOperation', () => {
 				const packageJson = {
 					name: 'project1',
 					version: '2.2.2',
-					main: 'src/project1.js',
-					dependencies: ['dep1', 'dep2']
+					main: 'src/project1.js'
 				};
 				sinon.assert.calledWith(writeJsonStub, 'build/release/package.json', packageJson);
 			});
@@ -95,8 +93,7 @@ describe('packageOperation', () => {
 					name: 'project1',
 					version: '2.2.2',
 					main: 'src/project1.js',
-					bin: 'src/cli.js',
-					dependencies: ['dep1', 'dep2']
+					bin: 'src/cli.js'
 				};
 				sinon.assert.calledWith(writeJsonStub, 'build/release/package.json', packageJson);
 			});
