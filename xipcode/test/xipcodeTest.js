@@ -5,7 +5,7 @@ import commandline from '../src/core/commandline';
 import * as xipcode from '../src/xipcode';
 import projectCreator from '../src/projects/projectCreator';
 import projectLoader from '../src/projects/projectLoader';
-import codebaseLoader from '../src/projects/codebaseLoader';
+import codebaseProjectsLoader from '../src/projects/codebaseProjectsLoader';
 import mockGulp from './gulp/mockGulp';
 import lifecycleTasksGenerator from '../src/gulp/lifecycleTasksGenerator';
 import sourceMapSuport from 'source-map-support';
@@ -29,7 +29,7 @@ describe('xipcode', () => {
 				throw new Error('Mock exception');
 			}
 		};
-		const mockCodebaseLoader = {
+		const mockCodebaseProjectsLoader = {
 			loadProjects() {}
 		};
 
@@ -101,8 +101,8 @@ describe('xipcode', () => {
 		it('loads project from process.cwd for codebase tasks', () => {
 			mockProject = { id: 'project-id', rootFolder: buildPath };
 			sandbox.stub(projectLoader, 'create').returns(mockProjectLoader);
-			sandbox.stub(codebaseLoader, 'create').returns(mockCodebaseLoader);
-			const loadProjectsSpy = sandbox.spy(mockCodebaseLoader, 'loadProjects');
+			sandbox.stub(codebaseProjectsLoader, 'create').returns(mockCodebaseProjectsLoader);
+			const loadProjectsSpy = sandbox.spy(mockCodebaseProjectsLoader, 'loadProjects');
 			xipcode.initialize();
 			sinon.assert.calledWith(loadProjectsSpy, process.cwd());
 		});
@@ -172,7 +172,7 @@ describe('xipcode', () => {
 		it('does not generate codebase tasks when no there is no project.json at the codebase root', () => {
 			mockProject = { id: 'project-id', rootFolder: buildPath };
 			sandbox.stub(projectLoader, 'create').returns(mockProjectLoader);
-			sandbox.stub(codebaseLoader, 'create').returns(mockCodebaseLoader);
+			sandbox.stub(codebaseProjectsLoader, 'create').returns(mockCodebaseProjectsLoader);
 			const generateStub = { generate: sandbox.stub() };
 			const createStub  = sandbox.stub(codebaseTaskGenerator, 'create').returns(generateStub);
 			xipcode.initialize();
@@ -184,7 +184,7 @@ describe('xipcode', () => {
 			sandbox.stub(commandline, 'getParsedArgs', () => { return { 'watch': true}; });
 			mockProject = { id: 'project-id', rootFolder: buildPath };
 			sandbox.stub(projectLoader, 'create').returns(mockProjectLoader);
-			sandbox.stub(codebaseLoader, 'create').returns(mockCodebaseLoader);
+			sandbox.stub(codebaseProjectsLoader, 'create').returns(mockCodebaseProjectsLoader);
 			const lifecycleTaskGeneratorStub = sandbox.spy(lifecycleTasksGenerator, 'create');
 			const codebaseTaskGeneratorStub = sandbox.stub(codebaseTaskGenerator, 'create');
 			xipcode.initialize();

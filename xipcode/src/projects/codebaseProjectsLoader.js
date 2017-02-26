@@ -3,7 +3,7 @@ import projectLoader from './projectLoader';
 import check from '../core/check';
 import { LoadProjectError }  from '../errors/error';
 
-function codebaseLoader(buildProfile) {
+function codebaseProjectsLoader(buildProfile) {
 	check.definedString('buildProfile', buildProfile);
 	return {
 		loadProjects(folder) {
@@ -24,5 +24,5 @@ function codebaseLoader(buildProfile) {
 }
 
 export default {
-	create: codebaseLoader
+	create: codebaseProjectsLoader
 }

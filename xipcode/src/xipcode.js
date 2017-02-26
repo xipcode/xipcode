@@ -2,7 +2,7 @@ import gulp from 'gulp';
 import commandline from './core/commandline';
 import projectCreator from './projects/projectCreator';
 import projectLoader from './projects/projectLoader';
-import codebaseLoader from './projects/codebaseLoader';
+import codebaseProjectsLoader from './projects/codebaseProjectsLoader';
 import sourceMapSupport from 'source-map-support';
 import lifecycleTasksGenerator from './gulp/lifecycleTasksGenerator';
 import buildProfile from './model/buildProfile';
@@ -16,7 +16,7 @@ function initialize() {
 	const profile = getProfile();
 	const watchEnabled = isWatchEnabled();
 	generateTasks(lifecycleTasksGenerator.create(watchEnabled), projectLoader, profile, currentFolder);
-	generateTasks(codebaseTaskGenerator.create(watchEnabled, profile), codebaseLoader, profile, currentFolder);
+	generateTasks(codebaseTaskGenerator.create(watchEnabled, profile), codebaseProjectsLoader, profile, currentFolder);
 
 	gulp.task('create-project', () => {
 		const id = commandline.getParsedArgs()['id'];

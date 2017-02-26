@@ -1,18 +1,18 @@
 import {expect} from 'chai';
 import {describe, it} from 'mocha';
-import codebaseLoader from '../../src/projects/codebaseLoader';
+import codebaseProjectsLoader from '../../src/projects/codebaseProjectsLoader';
 import sinon from 'sinon';
 import files from '../../src/core/files';
 import projectLoader from '../../src/projects/projectLoader';
 
-describe('codebaseLoader', () => {
+describe('codebaseProjectsLoader', () => {
 
 	const buildProfile = 'local';
 
 	describe('create', () => {
 
 		it('creates', () => {
-			const loader = codebaseLoader.create(buildProfile);
+			const loader = codebaseProjectsLoader.create(buildProfile);
 			expect(loader).not.to.be.undefined;
 			expect(loader.loadProjects).not.to.be.undefined;
 		})
@@ -29,7 +29,7 @@ describe('codebaseLoader', () => {
 		});
 
 		it('requires folder', () => {
-			expect(() => codebaseLoader.create(buildProfile).loadProjects()).to.throw('folder must be defined');
+			expect(() => codebaseProjectsLoader.create(buildProfile).loadProjects()).to.throw('folder must be defined');
 		});
 
 		it('loads projects from the codebaseRoot', () => {
@@ -41,7 +41,7 @@ describe('codebaseLoader', () => {
 					];
 				}
 			});
-			const loader = codebaseLoader.create(buildProfile);
+			const loader = codebaseProjectsLoader.create(buildProfile);
 			expect(loader.loadProjects('/some/folder')).to.eql([
 				{ id: 'project-1' }
 			])
