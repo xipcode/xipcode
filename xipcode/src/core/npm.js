@@ -86,8 +86,15 @@ function checkModuleExists(moduleFolder, moduleName) {
 	}
 }
 
+function isXipcodeModule(nodeModulesFolder, moduleName) {
+	const moduleFolder = path.join(nodeModulesFolder, moduleName);
+	const projectJsonFile = path.join(moduleFolder, 'project.json');
+	return fs.existsSync(projectJsonFile);
+}
+
 export default {
 	install,
 	uninstall,
-	getTransitiveDependencies
+	getTransitiveDependencies,
+	isXipcodeModule
 }

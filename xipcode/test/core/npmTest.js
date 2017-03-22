@@ -187,4 +187,21 @@ describe('npm', () => {
 			expect(call).throws('Folder for module invalid-module does not exist: path/to/node_modules/invalid-module');
 		});
 	});
+
+	describe('isXipcodeModule', () => {
+
+		const nodeModulesFolder = 'path/to/node/modules/folder';
+		const moduleName = 'some-node-module';
+		const projectJsonFile = path.join(nodeModulesFolder, moduleName, 'project.json');
+
+		it('returns true if a module is a xipcode dependency', () => {
+			fsExistsStub.withArgs(projectJsonFile).returns(true);
+			expect(npm.isXipcodeModule(nodeModulesFolder, moduleName)).to.equal(true);
+		});
+
+		it('returns false if a module is not a xipcode dependency', () => {
+			fsExistsStub.withArgs(projectJsonFile).returns(false);
+			expect(npm.isXipcodeModule(nodeModulesFolder, moduleName)).to.equal(false);
+		});
+	});
 });
