@@ -1,6 +1,6 @@
 {
   "name": "xipcode",
-  "version": "0.7.3",
+  "version": "0.7.4",
   "description": "A JavaScript Build System",
   "license": "MIT",
   "main": "src/xipcode.js",
