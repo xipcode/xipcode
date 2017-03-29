@@ -6,6 +6,8 @@ before_install: cd xipcode
 before_script:
   - npm install -g gulp
 script: gulp
+before_deploy:
+  - cd build/release
 deploy:
   provider: npm
   email: cory.white@exaptive.com
@@ -13,4 +15,5 @@ deploy:
     secure: NxUSU/cm7mLjUORdIgsVGf6AIeiVZ7OYW53GPKmr9NGQJmI6N4qMTPnWBHXImKkji/Xv7wncp731Et4i8AR8zFPedBDk3T1ILA14WIVIn+xsEVsHwLEPztSVIg3QvuOBK/rCyw4jkKWYW2cAuIr0lKlHUzVBp+3GiSKtBl4ujubAAtk3qEwsDJ4HBUBUo3ndoNMki8nGtQXpUVeWIfSsZVp828FucWASK8YPio4dEk5NHFadtsoW/xWEkASU1GBAPjVgUCTSbfs9cXuCVbrHRH52abn5R8PapkgPYahs68wf/5ljPlcZJEQhc5TVAM6RW8NU3L27EJLZvhSqHcyToMNYuCUtnC5K44BFPu6X2josSzefvdky7eLLrR7UhT0a/vokQsFWcdz8mJ2gC5cGQGW/cRbwegvIhEIBukwuutIkP/QoGllcujfCdUxGFuMj1PTTbnimNoK8YgJ33W3P8vj73ivHE5ZOH79Y58DJy4hQo9Fl9la8t+bBk5KZystRVN8oope9h1rpZzXf3GokJBXKz2hN4zuYtgf6uvDJW0F1KLzeCjHR78U5Td7KSHHmw9pkBlncdm651NnKZYxXa9C3wq9kOeg2HXlXOXxeIK/qs0J4hgKjmpWdedqXEy9TzGbiIp89mfwIUqUn1K+e7vAs/9w7GMDm3a7l+23d8rE=
   on:
     tags: true
-    repo: xipcode/xipcode/build/release
+    repo: xipcode/xipcode
+  skip_cleanup: true
